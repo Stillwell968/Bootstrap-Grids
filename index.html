@@ -10,44 +10,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Templete 1</title>
+    <title>Grid 1</title>
 </head>
 
 <body>
 
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Sapphire Pillars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link ">Disabled</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -57,113 +44,148 @@
             </div>
         </div>
     </nav>
+
     <!-- nav bar -->
 
-    <br><br>
+    <br><br><br><br><br><br>
     <!-- first grid -->
     <div class="container">
-
-        <div class="row " style=" height: 200px;">
-            <div class="col-6 bg-light"><p class="text-center">
-                Column
-            </p></div>
-            <div class="col-4 offset-1 bg-light"><p class="text-center">
-                Column
-            </p></div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
+                <div class="card border-0 bg-light">
+                    <img src="data:image/jpeg;base64,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"
+                        height="230px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer..With a coursel grid 4.This content
+                            is a little bit longer.
+                            that what is normaly displayed in most instances and thats all
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="card border-0 bg-light">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
+    <br><br><br><br>
     <!-- second grid -->
     <div class="container">
-        <div class="row  mt-5" style=" height: 100px;">
-            <div class="col-2 bg-light">
-                <p class="text-center">
-                    Column
-                </p>
+        <div class="row g-4">
+            <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2 offset-1 bg-light">
-                <p class="text-center">
-                    Column
-                </p>
+            <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2 bg-light offset-1">
-                <p class="text-center">
-                    Column
-                </p>
+            <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2 offset-1 bg-light">
-                <p class="text-center">
-                    Column
-                </p>
+            <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
 
-    <!-- third grid -->
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-2" >
-                <div class="card bg-light"style="border: none; height:90px;">
-                  <p class="text-center">
-                    Column
-                </p>
-                </div>
-              </div>
-            <div class="col-2">
-                <div class="card bg-light" style="border: none; height:90px;">
-                  <p class="text-center">
-                    Column
-                </p>
-                </div>
-              </div>
-            <div class="col-2">
-                <div class="card bg-light" style="border: none; height:90px;">
-                  <p class="text-center">
-                    Column
-                </p>
-                </div>
-              </div>
-            <div class="col-2">
-                <div class="card bg-light" style="border: none; height:90px;">
-                  <p class="text-center">
-                    Column
-                </p>
-                </div>
-              </div>
-            <div class="col-2">
-              <div class="card bg-light" style="border: none; height:90px;"> 
-                <p class="text-center">
-                    Column
-                </p>
-                
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card bg-light" style="border: none; height:90px;"> 
-                <p class="text-center">
-                    Column
-                </p>
-              </div>
-            </div>
-            
-          </div>
     </div>
+
+    <br><br>
+    <!-- third grid -->
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <div class="card border-0 bg-light" >
+                    <div class="card-body">
+                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
     <!-- footer -->
-    <div class="card mt-5">
+    <div class="card text-center">
         <div class="card-header">
-            Foooter
+          Featured
         </div>
         <div class="card-body">
-            <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
-                </footer>
-            </blockquote>
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-    </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
