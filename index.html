@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Grid 1</title>
 </head>
 
@@ -18,28 +21,30 @@
     <!-- nav bar -->
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Sapphire Pillars</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Foodis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Menu</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link ">Disabled</a>
+                        <a class="nav-link ">Delivery</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                    <button class="btn btn-outline-info" type="submit">Login</button>
                 </form>
             </div>
         </div>
@@ -47,125 +52,176 @@
 
     <!-- nav bar -->
 
-    <br><br><br><br><br><br>
+
     <!-- first grid -->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
-                <div class="card border-0 bg-light">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFRUXFxoXGBgXFxUXFxgaGBoXFxofFxUYHSggGBolHRcXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFg8OFSsfFh0rLTctKys3ListKy0rKzcrKy03KzU4OCstNysrNys3Ky0rLSstKy0rKysrKystKystLf/AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAACAwQBAAf/xAAvEAABAwMDAwIHAAMBAQEAAAABAAIRAyExBBJRQWFxgfATIpGhwdHhQrHxMhRy/8QAGAEBAQADAAAAAAAAAAAAAAAAAAECBAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhEDEQA/APMmCEypwseUTDBErSdmEtIuQnk/LKZViPKVFsGPygW2mcx/U3T4jhU0yIlIF5gT+kCdpcbD+I6YgwREqjTxhdWzygTWF4A7oDTIyFSyxvblOr4QIqf+Z5SRRPCeR2gdFW2IlBJQFvCV8MuJgKgDtPPhP0wGEElEQYIyurC8AYVFW5tf9raVje37QSfDLYkJ1YW8qnUgRCSR2jhBMaLuLJ1KNs8KwxEqUN7Tygm+GTgI6AvBHdW6cWhJqXNr8IJqrZMATCDYWkSP6rKOeFupjCCbUC0cpLqRzH8VJGJEfpPqREoJGn5ZSBTJuB3VAHYwnUceEElAdIQPEmw7J7rkxfhFRiYwglAINwj1HCdqIkBLwRPsIEOYeo/iMm0qmsRCkOMW/KBcHhYCqGmyQUDKJE+8qitEJL2iQmMIJBKDgQfxPCuMQgqMG3CXNtvvwgFp6dOsYVOmAhNpsEYSGkNJ+n9QC8jdIR6eJ9ym6Zgv5XVmgEHCDNSBb3ZLBkifvwmsALgU+uwRhBlQCFMMR0+0prjIjMKttMRiyBVBo2pDjBJH2TGEC2JT9LTEYQJ0oElbqQJCOo0B04stptBdObewgnYZIn7qms0bUeppiMJLyDbMIJ+kdPtKrpAbU80xGLKVthGJQIdYmPtwmaZov7sqdPTEYSagDXSPfZAnUgSEDI3An7qmk0FxOV2qpi3lAvUtEKR2I6dOFS4gx2t/U+pTEYsgS0CFHMT944Twbbeff6TaLBtwgRpgEqvE+8pzoa4kf9XUWCT1QT0o3SfZTNUBHRHqWCQlEhxBKCZxH6lPdEdk2swRhSONtvvwgmJ/sLaZEKkMEYUjm3KBlNsm/lUVaQzhTBsEQVQTuIvZAbjMDiyr+A2MKc0ABITPiHbHVB1M2jnCdp6IicoWacRc+q2i6JGUGRtcYx+0dKmC4z5WUaU3Jm6LZtcINuEBV6QERYyud80fRc4bnZsjq0ABIMIGPoNjCW0/LHN0T3naB9UbdMIzflAVCgNuJkIGja48IqDiARnjytoUQbkyg6hSBJm62tSAIixlcG7XCDZaW7nXNkAn5iOMJtag2MRAQ1qAFwYW1nEgDHQoFE/LHr3hOp0GxhcdKI78oaTyGkT4QKb8pPEwioUQSZuZRUqAIkmULRtdm0IAq0wCCPKEt3OHH6TNm5xk2Q1qO24MXQdqKIicQkVDaOE6u6YGP2sfphFj6oOFBsYU7DEjmyY152x1/CxlAESTKAdPSBvkylvYGut5Rs+VxE2QtZuJk+iAA3c6+IW6mkInC6rT2kQeqysdxF4CBNUyI4ytdQEYRVaAAsUhzztj3CBEwI5wgp0wQm/BEXKmdYxKBolxTvhltwUhhLTdU1HSQAga+oSAB6po05jN0j4bgJz1PlVfG+WeqDqVU7e/RbSoEiSUDKLon6D9p2mfEg9EHUiWmCtALjmB+EDWlxPRMpktdfr1Qa6mWwQUyq8mAOqys4kwB39Vjqbm3z19UBnTGJm/XumMqnb3XVKvy4z7KFtB0Tbx2QFT05IknwjoktJBW6apYgjCFjHOk4Qa1heT0C00y0iLhbRJa6CM9UVUkugDCDqri4gBY/TECQfPdc6m5sHKbXqfKIGUCzVO3uhbpiRMwenZEaDom3jpCOlV+U2wgVScWyCgbTLiSTCJtJzr4vPqtoOIdBHf1QKLSwjqPwuqkuMBFUlzrDHVA5paQcoBq0CBIKypVO3v1TdU+wAEykvouifqEA//ADGJm6Gk8gEH0Tm1vlmLpDabjfHX1QA2kXSSVgBa7sm0HEGCEp0uNrdJ7IBqS50BBVoltwURBaRN+noi1T5gC6BNeoSLeqS/Tnm6ZVpOAnPKx9X5Z6oJhUtdIDCbym/DdnHCUHkWhAbnXgDCawlpEhKoOgqms4YQPqPt5WBroxbHdKa7tHHhX/EG2UHUqo2zwlNBNwO/8QNPaR1VeleIjhBmmfcgjuuqOl0ATFkDnybX4TNM8TGEHNJaRI7eU/UPtHKHUPGPcIGuiJEfpARa6JIt/pVMqjbK59QbZU7T2MfnwgNgcbgd/KfpXf4wUWmeC3wkl0kwJQE5xc6wnoiYS03HZFpXiSMSi1LxMcIN1LunKU5rhcjvbotY6CJEKqu8BvlABqjbuUzWuiQLf7Wk2wY/KqpPBbKBOmf04SHEuJgdvC1zpJgT+kzTPEkeqBNNxDoIibLtU+4AHdFqXiYylNfBE25QA8OFyO9k2rVG2eUeqeI8qNx7GOiDA10TFsdyjoPt4TxUG2VEXcCefCASS4mB/F1J0GCIlO0zxhJrvk8/tBmofeAMXSXS2JGEym+De37R6t4iECtRUhvlSOa6MWx38pjz2jhMfUESgla+R4UpM3hMce08rGVAB/xBtQiQm0nyQT90qgAXcqqq0IKKh+VAH2jp04lLDptwrtgjFkB0iISA+CY+3CFjoEYlU6VojCDdKRddXcJ9yluIa4kJmnAJJyg2k8FwJVGoPy9EvUsFvKDcHET4/qDS+0dOk4VzCI7IHsEYU7XW2+/H+kBNfH5jhVaQiOi7TsG3HRKLg1xIQHWcN36zKKg4bp9yu0rRJ6otS0SEDNURHRIL5/E8LWuDiCVTWYNuOiAiRHZQh8W+sYRF9tvr/FTTYNuEC9MbdFPWeA6R7P6RFwaTHMItMwX8+ygXQcN3uZXasi2M/ZdqQAQcJbSHOBP/ABAovmJ+/CoqEQu1TBGFK90jbx7/AGgXvtHTrxKfRPypoYIxZRbgJ6T7lBlR8OJHpC6gRJ9lM0zB6ylVwA6cIM1RFknfJE/dMZBdJ99kWraIwgGubHCgc+0dPtKdUdIjMJj2COyCYGyjfElNLotysptEIOLIIhPHzEcJDG7jmye6lFwYQUvpCOIC3d8scXS3PJgY58p404jN+UDadFsYQ0nbZ+nqhpVDtj6I6FEESTKA9PTBk5MrXsAcCPKBnyuzZExm5xk+iAwA5wnCbWpCJxCVUpbbgxdHUcXQMICe60cZVDaDYiEk6cRY35XMqHbHX8IDouiRzYe/eE3S0xnJS6WnBEk9PotpHaSJkIDLQ11uJRNAc6/EoKVPcTJ9FtSntIg9cIG6imInBshqPkRxYrKjtxF4CKppwBIPT6oGmi2IhT03wI5wtNU7Y6/ha3TiLm6DqFMROUogNdbEIqb9pIyENOluJJPXCDGtDnGb9VmppjODMLns2kQfRDU+ZwEwEAVXbo+iOpRbGENagAJBhBUqHbHXqgBrvljm62lSEcyEX/zCM35SqbyJGePKAbNceENNgJM3RUqW65MoC3a4QbIMr0wCIsZS6h3EcYRuG52bQhr0QLgwgytSEYwpXO+WPX0T67yRH1S36cRm6BPwhClc25Tw4gEfRKZTm8oNaC0hUucSQAp5JNuiaGlsdUIf8EgSD5VHxjt7pNSpYR1RfCdE/bsgazTnm/TsjoVCJB6LKVX5cYQU6bjfHX1QMZTLpJKNoLSLyPwh07iDBHf1WklzrdOqBtQlzoC51EgSD/1LgtI68JtepMACZQMfWJb36rW6c83SnUnROeR+k5lb5Zi6AqFUgEH09+YXU6RdclLp03ESLdR5TNM+DBEIDZLXXNj1WvJc6AUq7ja3Sey0S0ib9PRAx9ItuCjrVSQAPX35Qah8wAJQPpuAk36lA06c83XUqxDSDkYXGv8ALPVKZSdEi3A/aAmUS65KymS10E25W6epEgiISoLiYt09EBOBc7MD8IH0y2CD/FwJa6/iV2oeSYA7+qDtRUJgDqgfpzzfr3WVKbhc36+qKrW+XCAW1jt7+/6lNoEiSfC0UnRP27LqNSxB6IBpOLSQUstLibwPwtDS4k4WMJDrjPVAL2FpEGy7UPLiAFtZxLoAwlVGFvdANSgQMzygfWO3um6ip8vlTupOift2QJNExM+EncRZUNqW8KcAm8BAVJ0G/hVVn9FM91wmU3wRNkDQCLkd/Ct+KNspNR4jOUsOtgx+UDWB2QLfcqjS1LRwsp1BEpAfmBP6QMLi4mP+JlF8OgiJss0zxhdWfflA3UVLgAd0N2wSO9v9IKdSCJtyqNQ+0TlA2pWG2eUlrXRMWx3Si7sQOisbVESgLTVZb4SpLiYH1Smv4E8+FRpanRBunqQ6CIlFXqSYAmLpNWpLrX/a2lUh17ftAUlpEjr0T9RWAb5S9TUEQkF/aOPCBha6MWx38p9KsC2eFxqiJUgf2JHVAV3SQO9/9I9PVuQR3RaapaJwkVKkutfhAVd8ugCYS9xaRI/qKjUvx0W6qoMIN1VS0cqd7XZIt9wuL8SI/SfUqCJQY2sNsqUSbgd79VgdbBjr5TqDwRnCAdO/IhJqvJNhMWXPfJMX4W0HiYxKAGuLSJHbyi1b+nK7U1BICTvgibfpAFQEXI7+ET6o2ym13iFC42wY/KBZBzHfygZViypDxCkc66BlAifeVTWIhSvAkJjHAkEoGB8/ieFfuEdlLUA24S/iW2oGtqdOnWMKrTOEJdOIwktqbSfp/UDn1BukI9M8T7lL00X8rqpAIOEFGpcLe7JYqSRP34S2PBcCnV4jCCqo8Qpm1LR0+0pTqkiMwqmxGLIHadw2pLqsOJH2SGVItynaaIxeUDdK8SUWpeJCmqOAdItZbTcC6c2QMZVkifuqazxtUupiEp9WbZhAw1bR0+0quk8bUkxHSFM2rAjEoGOqwTH24TdM8X92S9ORGEp7w10j32QO1LxIS2VAXAn7oaTgXTldqY+6B+qcNqkdUtHTpwsdUBjrHuU6pEYsga14hRfEifvHCEVLbeff6TaMbcIC0zhCVqHjd+uUDnhriQuoxJ6oNpPG6T7KPVOEdErURISzUDiCUAvqA/iU9zhHZZWAjCkc+0e/CBRf/YXU3CE4ARhSPaJKJRMEm6bUaPCQLGyNzpIRTnPm3FlQaYjCjcwRYrTVO2EDmVLRzhNoNETlTNpiMrqVSJQPnabYRU7uM+VLTE5KKdpEFBVWaBixlY6puj6Kdz9xzZbUaAJBhBc9jYS21bQpn1rZ8ogwRm/KCyi0RzIQtftJ4UtKsQCJ8LqQBuTKCyiASZuurAAiLXUgftdY2WufudmyCk1NxHGE2q0R4ChqgC4MLatckAT5QUGr8seqaxghRlgjN+VlOuYInwge2ptJ+iKgASZuZUtNoIkmVjX7TmyCmrAIjyhLtzhwp924mSsq2uDCCuu0ROEp9W0cJNatMdFzmCMoKhTbGEhlSJ72Sm1ztiVjGgiSUFFBoNzcoHwHW8pLH7Sb2Qi5MlA8Hc6/C3UNEThTPEEQVtSpuI4QHUfIjjKJ1MRhJewRYofiHbCDA60coWsBXBvdLJ7olGtZ08rFyKdUwlnr4XLkD2YHokO/K5cgdR6+VlXPouXIBo/4+qbX/wDP0XLkCT/kq2/pauQS8efyqKHXyVy5AFbJ/wDyuo5HhcuQMr49QkHquXIKypG/4rlyB1DH1S6+T4Cxcg2ln0/KLUdPP4XLkCB+VS/B9Vy5BKMjwm0f/IXLkCqv+Xoip5PgLlyDauR6pbOnlcuQNqYKQfwuXINGErnyuXKxhp//2Q=="
-                        height="230px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer..With a coursel grid 4.This content
-                            is a little bit longer.
-                            that what is normaly displayed in most instances and thats all
-                        </p>
+    <div class="header bg-secondary " style="height: 500px; ">
+        <div class="container position-relative ">
+            <div class="row row-cols-1 row-cols-md-2 g-4 position-absolute mt-3 ">
+                <div class="col col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="card bg-secondary border-0">
+                        <div class="card-body">
+                            <p class="text-start fs-3 fst-italic" style="color: rgb(240, 151, 69); height: 20px;">Taste
+                                of your homely food</p>
+                            <p class="text-start fs-1 fw-bold ">Delecius every food bite.</p>
+                            <p class="text-start fs-6 text-wrap mt-5 fw-lighter" style="width: 15rem;">please choose
+                                your favourite food for your everyday life</p>
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-warning  btn-md" type="button">Order Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <div class="card border-0 bg-light">
-                    <img src="data:image/jpeg;base64,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"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer</p>
+                <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="card border-0 bg-light">
+                        <img class="img-fluid"
+                            src="https://post.healthline.com/wp-content/uploads/2020/09/eggs-breakfast-avocado-732x549-thumbnail.jpg"
+                            alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br><br><br><br>
+
+    <br><br><br><br><br><br><br><br>
     <!-- second grid -->
     <div class="container">
         <div class="row g-4">
             <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="card border-0 bg-light">
+                <div class="card border-0 bg-success rounded-3">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://i.guim.co.uk/img/media/a6795e6f75daa968c1154d4acedc091599c98474/0_299_4973_2984/master/4973.jpg?width=1200&quality=85&auto=format&fit=max&s=b641084777d2dedffc4dc6523078514d"
+                            class="card-img-top w-50 rounded-circle mx-auto d-block" height="100px" alt="...">
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p>memota pes</p>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-plus-square"
+                                            aria-hidden="true" style="color: black;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="card border-0 bg-light">
+                <div class="card border-0 bg-warning rounded-3">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://cdn.mos.cms.futurecdn.net/bkvxsTSowJXVD6A3wGRwsT-768-80.jpg"
+                            class="card-img-top w-50 rounded-circle mx-auto d-block" height="100px" alt="...">
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p>segota fer </p>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-plus-square"
+                                            aria-hidden="true" style="color: black;"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="card border-0 bg-light">
+                <div class="card border-0 bg-info    rounded-3">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://i.ndtvimg.com/i/2017-06/eggs_620x350_81497015133.jpg"
+                            class="card-img-top w-50 rounded-circle mx-auto d-block" height="100px" alt="...">
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p>bread retis</p>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-plus-square"
+                                            aria-hidden="true" style="color: black;"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="card border-0 bg-light">
+                <div class="card border-0 bg-danger rounded-3">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIkAe_cauLn1us0j2iAJGUHxPAbaNjU-wvIyAP6UrisxLO9tcEJMUAdGIxdO_Eemu-a0&usqp=CAU"
+                            class="card-img-top w-50 rounded-circle mx-auto d-block" height="100px" alt="...">
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p>esponga eggs</p>
+                                </div>
+                                <div class="col">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-plus-square"
+                                            aria-hidden="true" style="color: black;"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br><br>
 
-    </div>
-
+    <h1 class="text-center mt-5">OUR NFT COLLECTIONS</h1>
     <br><br>
     <!-- third grid -->
-    <div class="container mt-5">
+    <div class="container mt-3">
         <div class="row g-4">
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light">
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://lh3.googleusercontent.com/iQeFbCD7hwreo-aJ2NCRTofUWPd3xiZld-USutM_w3RbRLyi1xetooEXMlTAKSC4JWIFh8_L5o14nuk0Ry0hvpzRoedY6vuu5-JoMw"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">Billionaire</p>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light">
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://pbs.twimg.com/media/E2-4ZMKX0AgYsVg.png" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">Technology</p>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light">
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://lh3.googleusercontent.com/Jdi9Xt41_CIx6lcyTawCdsskMl0NAgceIeTVelKtxjM0AZuZwgmjVN27jt3mPr7FsAmHl_W6BdFaRtsm92M2ZqkYJlFtcF8hIsHKiQ"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">Rich Swagger</p>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light">
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJs6UdaAOydaU6DJmZ90HBuc-kYnyr73yp25G8MrIhQTC1FaesY8pTFvpDlDXunn7vBE&usqp=CAU"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">King Ape</p>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light">
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3v-IXmvJ4qeBWTj16He8DMOerdxSI_Dkrp0XoKNyUUNUSlfrP-T4IFSW1ezNNuLRaCrs&usqp=CAU"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">Party Ape</p>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <div class="card border-0 bg-light" >
-                    <div class="card-body">
-                        <p class="card-text">A well-known quote, contained in a blockquote element.</p>
+                <div class="card text-end bg-dark text-white">
+                    <img src="https://preview.redd.it/87bgko4e9xu71.jpg?width=640&crop=smart&auto=webp&s=11a4f793a2c7dd059587310e8f9a8edd76980194"
+                        class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <p class="position-absolute bottom-0 end-0 fw-bold" style="height: 10px;">Technology</p>
                     </div>
                 </div>
             </div>
@@ -173,20 +229,52 @@
     </div>
     <br><br>
     <!-- footer -->
-    <div class="card text-center">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-          2 days ago
-        </div>
-      </div>
-
+    
+        <footer class="row row-cols-5 border-top bg-secondary">
+          <div class="col">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <p class="mx-5 text-dark">Sapphire Pillars © 2021</p>
+          </div>
+      
+          <div class="col">
+      
+          </div>
+      
+          <div class="col">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col">
+            <h5 >Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            </ul>
+          </div>
+        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
